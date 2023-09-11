@@ -7,7 +7,7 @@
   <title>OnePage</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <!--animationlink-->
- <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js"></script>
 
 
   <!--fontlink-->
@@ -61,9 +61,10 @@
 </head>
 
 <body>
-  <header id="header" class="w-full fixed bg-white top-0 shadow-sm">
+  <!--header section-->
+  <header id="header" class="w-full fixed bg-white top-0 shadow-sm z-10">
     <div
-      class="static w-[300px] sm:w-[540px] sm:shrink md:w-[720px] xl:w-[1140px] lg:w-[960px]  mx-auto flex justify-between  py-[15px] px-[12px] ">
+      class="bg-white static w-[300px] sm:w-[540px] sm:shrink md:w-[720px] xl:w-[1140px] lg:w-[960px]  mx-auto flex justify-between  py-[15px] px-[12px] ">
       <h1 class="font-poppins text-[#16507b] text-[28px] font-[300] tracking-[0.5px] flex items-center leading-[1]">
         OnePage</h1>
       <nav id="navbar" class="">
@@ -73,26 +74,27 @@
           <li><a class="hover:text-[#2487ce] py-[10px] pl-[30px]" href="#services">Services</a></li>
           <li><a class="hover:text-[#2487ce] py-[10px] pl-[30px]" href="#pricing">Pricing</a></li>
           <div class="hidden sm:block sm:ml-0 relative">
-            <button class="hover:text-[#2487ce] py-[10px] pl-[30px]">
-              Drop down <iconify-icon icon="bi:chevron-down" style="color: #16507b;"></iconify-icon>
+            <button class="hover:text-[#2487ce] py-[10px] pl-[30px] flex items-center">
+              Drop down <iconify-icon icon="bi:chevron-down" class="" style="color: #16507b;"></iconify-icon>
             </button>
             <div
-              class="absolute left-0 ml-[14px] py-[10px] w-[200px] bg-white text-[#16507b] rounded-[4px] shadow-xl overflow-hidden z-10 hidden">
+              class="absolute left-0 ml-[14px] py-[10px] w-[200px] bg-white text-[#16507b] rounded-[4px] shadow-xl  z-10 hidden">
               <a href="#" class="block px-4 py-2 text-[14px]  hover:text-[#2487ce]">Drop Down 1</a>
-              <button href="#" class=" px-4 py-2 text-[14px] hover:text-[#2487ce] static hidden sm:block sm:ml-0 ">Deep Drop
-                Down</button>
-              <div
-                class="absolute left-0 ml-[14px] py-[10px] w-[200px] text-[#16507b] rounded-[4px] shadow-xl overflow-hidden z-10 hidden ">
-                <a href="#">Deep Drop Down 1</a>
-                <a href="#">Deep Drop Down 2</a>
-                <a href="#">Deep Drop Down 3</a>
-                <a href="#">Deep Drop Down 4</a>
-                <a href="#">Deep Drop Down 5</a>
+              <div class="hidden sm:block sm:ml-0 static">
+                <button href="#" class="px-4 py-2 text-[14px] hover:text-[#2487ce] static  sm:block">Deep Drop
+                  Down</button>
+                <div
+                  class="absolute left-[-100%] top-[48px]   bg-white py-[10px] w-[200px] h-[225px] text-[#16507b] rounded-[4px] shadow-xl overflow-hidden z-10">
+                  <a href="#" class="block hover:text-[#2487ce] py-[10px] px-[20px]">Deep Drop Down 1</a>
+                  <a href="#" class="block hover:text-[#2487ce] py-[10px] px-[20px]">Deep Drop Down 2</a>
+                  <a href="#" class="block hover:text-[#2487ce] py-[10px] px-[20px]">Deep Drop Down 3</a>
+                  <a href="#" class="block hover:text-[#2487ce] py-[10px] px-[20px]">Deep Drop Down 4</a>
+                  <a href="#" class="block hover:text-[#2487ce] py-[10px] px-[20px]">Deep Drop Down 5</a>
+                </div>
               </div>
               <a href="#" class="block px-4 py-2 text-[14px] hover:text-[#2487ce]">Drop Down 2</a>
               <a href="#" class="block px-4 py-2 text-[14px] hover:text-[#2487ce]">Drop Down 3</a>
               <a href="#" class="block px-4 py-2 text-[14px] hover:text-[#2487ce]">Drop Down 4</a>
-
             </div>
           </div>
           <li><a class="hover:text-[#2487ce] py-[10px] pl-[30px]" href="#contact">Contact</a></li>
@@ -112,7 +114,6 @@
           }
         </script>
 
-
         <script>
           const dropdownToggle = document.querySelector('.sm\\:ml-0 > button');
           const dropdownMenu = document.querySelector('.sm\\:ml-0 > div');
@@ -131,27 +132,23 @@
         <li class="py-[10px] px-[20px] w-full"><a class="hover:text-[#2487ce]" href="#services">Services</a>
         </li>
         <li class="py-[10px] px-[20px] w-full"><a class="hover:text-[#2487ce]" href="#pricing">Pricing</a></li>
-        <div class="hidden sm:block relative py-[10px] px-[20px] w-full">
+        <div class="hidden sm:block sm:ml-0 relative py-[10px] px-[20px] w-full">
           <button class="hover:text-[#2487ce]">
             Dropdown
           </button>
           <div
-            class="absolute left-0 ml-[14px] py-[10px] w-[200px] text-[#16507b] rounded-[4px] shadow-xl overflow-hidden z-10 hidden">
-            <a href="#" class="block px-4 py-2 text-[14px]  hover:text-[#2487ce]">Drop Down 1</a>
-            <a href="#" class="block px-4 py-2 text-[14px] hover:text-[#2487ce]">Deep Drop
-              Down</a>
-            <ul><!--
-                            <li><a href="#">Deep Drop Down 1</a></li>
-                            <li><a href="#">Deep Drop Down 2</a></li>
-                            <li><a href="#">Deep Drop Down 3</a></li>
-                            <li><a href="#">Deep Drop Down 4</a></li>
-                            <li><a href="#">Deep Drop Down 5</a></li>
-                        </ul> -->
-              <a href="#" class="block px-4 py-2 text-[14px] hover:text-[#2487ce]">Drop Down 2</a>
-              <a href="#" class="block px-4 py-2 text-[14px] hover:text-[#2487ce]">Drop Down 3</a>
-              <a href="#" class="block px-4 py-2 text-[14px] hover:text-[#2487ce]">Drop Down 4</a>
-
+            class="absolute left-[-100%] top-[48px]   bg-white py-[10px] w-[200px] h-[225px] text-[#16507b] rounded-[4px] shadow-xl overflow-hidden z-10">
+            <a href="#" class="block hover:text-[#2487ce] py-[10px] px-[20px]">Deep Drop Down 1</a>
+            <a href="#" class="block hover:text-[#2487ce] py-[10px] px-[20px]">Deep Drop Down 2</a>
+            <a href="#" class="block hover:text-[#2487ce] py-[10px] px-[20px]">Deep Drop Down 3</a>
+            <a href="#" class="block hover:text-[#2487ce] py-[10px] px-[20px]">Deep Drop Down 4</a>
+            <a href="#" class="block hover:text-[#2487ce] py-[10px] px-[20px]">Deep Drop Down 5</a>
           </div>
+
+          <a href="#" class="block px-4 py-2 text-[14px] hover:text-[#2487ce]">Drop Down 2</a>
+          <a href="#" class="block px-4 py-2 text-[14px] hover:text-[#2487ce]">Drop Down 3</a>
+          <a href="#" class="block px-4 py-2 text-[14px] hover:text-[#2487ce]">Drop Down 4</a>
+        </div>
         </div>
 
         <li class="py-[10px] px-[20px] w-full"><a class="hover:text-[#2487ce]" href="#contact">Contact</a></li>
@@ -187,12 +184,13 @@
       <div class="flex flex-col lg:flex-row mt-[100px]">
         <div class="flex flex-col md:flex-row">
           <div
-            class="mx-auto w-[300px] sm:w-[540px] md:w-[360px]  lg:w-[240px] xl:w-[281.88px] px-[12px] col-md-6 col-lg-3 flex items-stretch mb-[48px]"
+            class="group transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300  mx-auto w-[300px] sm:w-[540px] md:w-[360px]  lg:w-[240px] xl:w-[281.88px] px-[12px] col-md-6 col-lg-3 flex items-stretch mb-[48px]"
             data-aos="zoom-in" data-aos-delay="200">
-            <div class="icon-box  border rounded-[8px] shadow-xl px-[30px] py-[50px]">
+            <div class="icon-box  border rounded-[8px] shadow-xl px-[30px] py-[50px] ">
               <div class="icon pt-[10px] mb-[20px]"><img src="assets/stack.svg" class="w-[36px] h-[36px]" alt=""></div>
-              <p class="mb-[15px]"><a class="text-[#124265] hover:text-[#2487ce] font-[700]  text-[18px] font-raleway "
-                  href="">Lorem Ipsum</a></h4>
+              <p class="mb-[15px]"><a
+                  class="text-[#124265] group-hover:text-[#2487ce] font-[700]  text-[18px] font-raleway " href="">Lorem
+                  Ipsum</a></h4>
               <p class="text-[15px]  leading-[28px] text-[#444444] font-openSans">Voluptatum deleniti
                 atque corrupti quos dolores et quas molestias
                 excepturi</p>
@@ -200,11 +198,12 @@
           </div>
 
           <div
-            class="w-[300px] sm:w-[540px] md:w-[360px] lg:w-[240px] xl:w-[281.88px] px-[12px] col-md-6 col-lg-3 flex items-stretch mb-[48px]"
+            class=" group transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 w-[300px] sm:w-[540px] md:w-[360px] lg:w-[240px] xl:w-[281.88px] px-[12px] col-md-6 col-lg-3 flex items-stretch mb-[48px]"
             data-aos="zoom-in" data-aos-delay="300">
             <div class="icon-box  border rounded-[8px] shadow-xl px-[30px] py-[50px]">
               <div class="icon pt-[10px] mb-[20px]"><img src="assets/palette.svg" class="w-[36px] h-[36px]"></div>
-              <h4 class=""><a class="text-[#124265] hover:text-[#2487ce] font-[700]  text-[18px] font-raleway mb-[15px]"
+              <h4 class=""><a
+                  class="text-[#124265] group-hover:text-[#2487ce] font-[700]  text-[18px] font-raleway mb-[15px]"
                   href="">Sed ut perspiciatis</a></h4>
               <p class="text-[15px]  leading-[28px] text-[#444444] font-openSans">Duis aute irure dolor in
                 reprehenderit in voluptate velit esse cillum
@@ -214,25 +213,29 @@
         </div>
         <div class="flex flex-col md:flex-row">
           <div
-            class="w-[300px] sm:w-[540px] md:w-[360px] lg:w-[240px] xl:w-[281.88px] px-[12px] col-md-6 col-lg-3 flex items-stretch mb-[48px]"
+            class="group transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 w-[300px] sm:w-[540px] md:w-[360px] lg:w-[240px] xl:w-[281.88px] px-[12px] col-md-6 col-lg-3 flex items-stretch mb-[48px]"
             data-aos="zoom-in" data-aos-delay="400">
             <div class="icon-box border rounded-[8px] shadow-xl px-[30px] py-[50px]">
               <div class="icon pt-[10px] mb-[20px]"><img src="assets/commad.svg" class="w-[36px] h-[36px]"></div>
-              <h4 class="mb-[15px]"><a class="text-[#124265] hover:text-[#2487ce] font-[700]  text-[18px] font-raleway"
-                  href="">Magni Dolores</a></h4>
+              <h4 class="mb-[15px]"><a
+                  class="text-[#124265] group-hover:text-[#2487ce] font-[700]  text-[18px] font-raleway" href="">Magni
+                  Dolores</a></h4>
               <p class="text-[15px]  leading-[28px] text-[#444444] font-openSans">Excepteur sint occaecat
                 cupidatat non proident, sunt in culpa qui officia
               </p>
+              
+
             </div>
           </div>
 
           <div
-            class="w-[300px] sm:w-[540px] md:w-[360px] lg:w-[240px] xl:w-[281.88px] px-[12px] col-md-6 col-lg-3 flex items-stretch mb-[48px]"
+            class="group transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 w-[300px] sm:w-[540px] md:w-[360px] lg:w-[240px] xl:w-[281.88px] px-[12px] col-md-6 col-lg-3 flex items-stretch mb-[48px]"
             data-aos="zoom-in" data-aos-delay="400">
             <div class="icon-box border rounded-[8px] shadow-xl px-[30px] py-[50px]">
               <div class="icon pt-[10px] mb-[20px]"><img src="assets/finger.svg" class="w-[36px] h-[36px]"></i></div>
-              <h4 class="mb-[15px]"><a class="text-[#124265] hover:text-[#2487ce] font-[700]  text-[18px] font-raleway"
-                  href="">Nemo Enim</a></h4>
+              <h4 class="mb-[15px]"><a
+                  class="text-[#124265] group-hover:text-[#2487ce] font-[700]  text-[18px] font-raleway" href="">Nemo
+                  Enim</a></h4>
               <p class="text-[15px]  leading-[28px] text-[#444444] font-openSans">At vero eos et accusamus
                 et iusto odio dignissimos ducimus qui blanditiis
               </p>
@@ -348,42 +351,48 @@
 
       <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 ">
 
-        <div class=" px-[12px] w-[150px] sm:w-[270px] md:w-[240px] lg:w-[159.98px] xl:w-[190px]  flex justify-center"
+        <div
+          class=" transition ease-in-out delay-150 grayscale hover:grayscale-0 hover:-translate-y-1 hover:scale-110 duration-300  px-[12px] w-[150px] sm:w-[270px] md:w-[240px] lg:w-[159.98px] xl:w-[190px]  flex justify-center"
           data-aos="zoom-in">
           <img src="assets/clients/client-1.png"
-            class="py-[15px] w-[98px] h-[72px] md:w-[97.19px] md:h-[72.03px] lg:w-[61.19px] lg:h-[56.45px] xl:w-[74.69px] xl:h-[62.3px]"
+            class="  py-[15px] w-[98px] h-[72px] md:w-[97.19px] md:h-[72.03px] lg:w-[61.19px] lg:h-[56.45px] xl:w-[74.69px] xl:h-[62.3px]"
             alt="">
         </div>
 
-        <div class="px-[12px]  w-[150px] sm:w-[270px] md:w-[240px] lg:w-[159.98px] xl:w-[190px] flex justify-center"
+        <div
+          class="transition ease-in-out delay-150  grayscale hover:grayscale-0 hover:-translate-y-1 hover:scale-110 duration-300 px-[12px]  w-[150px] sm:w-[270px] md:w-[240px] lg:w-[159.98px] xl:w-[190px] flex justify-center"
           data-aos="zoom-in">
           <img src="assets/clients/client-2.png"
-            class="py-[15px] w-[98px] h-[72px] md:w-[97.19px] md:h-[72.03px] lg:w-[61.19px] lg:h-[56.45px] xl:w-[74.69px] xl:h-[62.3px]"
+            class=" py-[15px] w-[98px] h-[72px] md:w-[97.19px] md:h-[72.03px] lg:w-[61.19px] lg:h-[56.45px] xl:w-[74.69px] xl:h-[62.3px]"
             alt="">
         </div>
 
-        <div class="px-[12px]  w-[150px] sm:w-[270px] md:w-[240px] lg:w-[159.98px] xl:w-[190px] flex justify-center"
+        <div
+          class="transition ease-in-out delay-150  grayscale hover:grayscale-0 hover:-translate-y-1 hover:scale-110 duration-300 px-[12px]  w-[150px] sm:w-[270px] md:w-[240px] lg:w-[159.98px] xl:w-[190px] flex justify-center"
           data-aos="zoom-in">
           <img src="assets/clients/client-3.png"
             class="py-[15px] w-[98px] h-[72px] md:w-[97.19px] md:h-[72.03px] lg:w-[61.19px] lg:h-[56.45px] xl:w-[74.69px] xl:h-[62.3px]"
             alt="">
         </div>
 
-        <div class="px-[12px]  w-[150px] sm:w-[270px] md:w-[240px] lg:w-[159.98px] xl:w-[190px] flex justify-center"
+        <div
+          class="transition ease-in-out delay-150  grayscale hover:grayscale-0 hover:-translate-y-1 hover:scale-110 duration-300 px-[12px]  w-[150px] sm:w-[270px] md:w-[240px] lg:w-[159.98px] xl:w-[190px] flex justify-center"
           data-aos="zoom-in">
           <img src="assets/clients/client-4.png"
             class="py-[15px] w-[98px] h-[72px] md:w-[97.19px] md:h-[72.03px] lg:w-[61.19px] lg:h-[56.45px] xl:w-[74.69px] xl:h-[62.3px]"
             alt="">
         </div>
 
-        <div class="px-[12px]  w-[150px] sm:w-[270px] md:w-[240px] lg:w-[159.98px] xl:w-[190px] flex justify-center"
+        <div
+          class="transition ease-in-out delay-150  grayscale hover:grayscale-0 hover:-translate-y-1 hover:scale-110 duration-300 px-[12px]  w-[150px] sm:w-[270px] md:w-[240px] lg:w-[159.98px] xl:w-[190px] flex justify-center"
           data-aos="zoom-in">
           <img src="assets/clients/client-5.png"
             class="py-[15px] w-[98px] h-[72px] md:w-[97.19px] md:h-[72.03px] lg:w-[61.19px] lg:h-[56.45px] xl:w-[74.69px] xl:h-[62.3px]"
             alt="">
         </div>
 
-        <div class="px-[12px] w-[150px] sm:w-[270px] md:w-[240px] lg:w-[159.98px] xl:w-[190px] flex justify-center"
+        <div
+          class="transition ease-in-out delay-150  grayscale hover:grayscale-0 hover:-translate-y-1 hover:scale-110 duration-300 px-[12px] w-[150px] sm:w-[270px] md:w-[240px] lg:w-[159.98px] xl:w-[190px] flex justify-center"
           data-aos="zoom-in">
           <img src="assets/clients/client-6.png"
             class="py-[15px] w-[98px] h-[72px] md:w-[97.19px] md:h-[72.03px] lg:w-[61.19px] lg:h-[56.45px] xl:w-[74.69px] xl:h-[62.3px]"
@@ -396,7 +405,7 @@
   </section><!-- End Clients Section -->
 
   <!-- ======= Testimonials Section ======= -->
-  <section id="testimonials" class="py-[80px]">
+  <section id="testimonials" class="py-[80px] overflow-hidden ">
     <div class=" mx-auto w-[300px] sm:w-[540px] md:w-[720px] lg:w-[960px] xl:w-[1140px]" data-aos="fade-up">
 
       <div class="text-center pb-[30px] px-[12px] ">
@@ -407,11 +416,12 @@
           in iste officiis commodi quidem hic quas.</p>
       </div>
 
-      <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100" data-carousel="slide">
+      <div class="testimonials-slider swiper mx-auto" data-aos="fade-up" data-aos-delay="100" data-carousel="slide">
         <div class="px-[2px]">
 
-          <div class="w-[300px] sm:w-[540px] md:w-[720px] lg:w-[960px] xl:w-[380px] px-[10px]">
-            <div id="1" class="flex flex-col items-center" data-carousel-item>
+          <div class="w-[300px] sm:w-[540px] md:w-[720px] lg:w-[960px] xl:w-[1140px] px-[10px] grid grid-cols-1 xl:grid-cols-3 ">
+            
+            <div id="1" class="relative" data-carousel-item>
               <p
                 class="italic text-center mx-[15px] p-[20px] bg-[#f3f9fd] font-openSans text-[#444444] text-[16px] mb-[35px] rounded-[6px]">
                 <iconify-icon icon="mingcute:quote-left-fill" class="w-[26px] h-[26px]"
@@ -420,15 +430,16 @@
                 quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
                 <iconify-icon icon="mingcute:quote-right-fill" style="color: #c9e3f5; font-size: 26px;"></iconify-icon>
               </p>
-              <img src="assets/testimonials/testimonials-1.jpg" class="rounded-[50%] w-[90px] h-[90px]" alt="">
-              <h3 class="font-raleway text-[18px] font-bold mt-[10px] mb-[5px]">Saul Goodman</h3>
-              <h4 class="text-[#999] font-raleway text-[14px]">Ceo &amp; Founder</h4>
+              <img src="assets/testimonials/testimonials-1.jpg" class="rounded-[50%] w-[90px] h-[90px] mx-auto" alt="">
+              <h3 class="font-raleway text-[18px] font-bold mt-[10px] mb-[5px] text-center">Saul Goodman</h3>
+              <h4 class="text-[#999] font-raleway text-[14px] mx-auto text-center">Ceo &amp; Founder</h4>
             </div>
             <!-- End testimonial item -->
 
 
             <div id="2"
-              class="flex flex-col items-center w-[300px] sm:w-[540px] md:w-[720px] lg:w-[960px] xl:w-[380px] px-[10px]">
+              class="relative w-[300px] sm:w-[540px] md:w-[720px] lg:w-[960px] xl:w-[380px] px-[10px] hidden 
+              ">
               <p
                 class="italic text-center mx-[15px] p-[20px] bg-[#f3f9fd] font-openSans text-[#444444] text-[16px] mb-[35px] rounded-[6px]">
                 <iconify-icon icon="mingcute:quote-left-fill" class="w-[26px] h-[26px]"
@@ -437,14 +448,14 @@
                 quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
                 <iconify-icon icon="mingcute:quote-right-fill" style="color: #c9e3f5; font-size: 26px;"></iconify-icon>
               </p>
-              <img src="assets/testimonials/testimonials-2.jpg" class="rounded-[50%] w-[90px] h-[90px]" alt="">
-              <h3 class="font-raleway text-[18px] font-bold mt-[10px] mb-[5px]">Sara Wilsson</h3>
-              <h4 class="text-[#999] font-raleway text-[14px]">Designer</h4>
+              <img src="assets/testimonials/testimonials-2.jpg" class="rounded-[50%] w-[90px] h-[90px] mx-auto" alt="">
+              <h3 class="font-raleway text-[18px] font-bold mt-[10px] mb-[5px] text-center">Sara Wilsson</h3>
+              <h4 class="text-[#999] font-raleway text-[14px] text-center">Designer</h4>
             </div><!-- End testimonial item -->
 
 
             <div id="3"
-              class="flex flex-col items-center w-[300px] sm:w-[540px] md:w-[720px] lg:w-[960px] xl:w-[380px] px-[10px]">
+              class="mx-auto relative w-[300px] sm:w-[540px] md:w-[720px] lg:w-[960px] xl:w-[380px] px-[10px] hidden">
               <p
                 class="italic text-center mx-[15px] p-[20px] bg-[#f3f9fd] font-openSans text-[#444444] text-[16px] mb-[35px] rounded-[6px]">
                 <iconify-icon icon="mingcute:quote-left-fill" class="w-[26px] h-[26px]"
@@ -453,15 +464,15 @@
                 tempor labore quem eram duis noster aute amet eram fore quis sint minim.
                 <iconify-icon icon="mingcute:quote-right-fill" style="color: #c9e3f5; font-size: 26px;"></iconify-icon>
               </p>
-              <img src="assets/testimonials/testimonials-3.jpg" class="rounded-[50%] w-[90px] h-[90px]" alt="">
-              <h3 class="font-raleway text-[18px] font-bold mt-[10px] mb-[5px]">Jena Karlis</h3>
-              <h4 class="text-[#999] font-raleway text-[14px]">Store Owner</h4>
+              <img src="assets/testimonials/testimonials-3.jpg" class="rounded-[50%] w-[90px] h-[90px] mx-auto" alt="">
+              <h3 class="font-raleway text-[18px] font-bold mt-[10px] mb-[5px] text-center">Jena Karlis</h3>
+              <h4 class="text-[#999] font-raleway text-[14px] text-center">Store Owner</h4>
             </div>
             <!-- End testimonial item -->
 
 
             <div id="4"
-              class="flex flex-col items-center w-[300px] sm:w-[540px] md:w-[720px] lg:w-[960px] xl:w-[380px] px-[10px]">
+              class="mx-auto relative w-[300px] sm:w-[540px] md:w-[720px] lg:w-[960px] xl:w-[380px] px-[10px] hidden">
               <p
                 class="italic text-center mx-[15px] p-[20px] bg-[#f3f9fd] font-openSans text-[#444444] text-[16px] mb-[35px] rounded-[6px]">
                 <iconify-icon icon="mingcute:quote-left-fill" class="w-[26px] h-[26px]"
@@ -470,15 +481,15 @@
                 minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
                 <iconify-icon icon="mingcute:quote-right-fill" style="color: #c9e3f5; font-size: 26px;"></iconify-icon>
               </p>
-              <img src="assets/testimonials/testimonials-4.jpg" class="rounded-[50%] w-[90px] h-[90px]" alt="">
-              <h3 class="font-raleway text-[18px] font-bold mt-[10px] mb-[5px]">Matt Brandon</h3>
-              <h4 class="text-[#999] font-raleway text-[14px]">Freelancer</h4>
+              <img src="assets/testimonials/testimonials-4.jpg" class="rounded-[50%] w-[90px] h-[90px] mx-auto" alt="">
+              <h3 class="font-raleway text-[18px] font-bold mt-[10px] mb-[5px] text-center">Matt Brandon</h3>
+              <h4 class="text-[#999] font-raleway text-[14px] text-center">Freelancer</h4>
             </div>
             <!-- End testimonial item -->
 
 
             <div id="5"
-              class="flex flex-col items-center w-[300px] sm:w-[540px] md:w-[720px] lg:w-[960px] xl:w-[380px] px-[10px]">
+              class="mx-auto relative w-[300px] sm:w-[540px] md:w-[720px] lg:w-[960px] xl:w-[380px] px-[10px] hidden">
               <p
                 class="italic text-center mx-[15px] p-[20px] bg-[#f3f9fd] font-openSans text-[#444444] text-[16px] mb-[35px] rounded-[6px]">
                 <iconify-icon icon="mingcute:quote-left-fill" class="w-[26px] h-[26px]"
@@ -487,14 +498,14 @@
                 labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
                 <iconify-icon icon="mingcute:quote-right-fill" style="color: #c9e3f5; font-size: 26px;"></iconify-icon>
               </p>
-              <img src="assets/testimonials/testimonials-5.jpg" class="rounded-[50%] w-[90px] h-[90px]" alt="">
-              <h3 class="font-raleway text-[18px] font-bold mt-[10px] mb-[5px]">John Larson</h3>
-              <h4 class="text-[#999] font-raleway text-[14px]">Entrepreneur</h4>
+              <img src="assets/testimonials/testimonials-5.jpg" class="rounded-[50%] w-[90px] h-[90px] mx-auto" alt="">
+              <h3 class="font-raleway text-[18px] font-bold mt-[10px] mb-[5px] text-center">John Larson</h3>
+              <h4 class="text-[#999] font-raleway text-[14px] text-center">Entrepreneur</h4>
             </div>
           </div><!-- End testimonial item -->
 
         </div>
-        <div class="flex justify-center">
+        <div class="flex justify-center m">
           <a href="#1"
             class="mt-[20px] mx-[4px] bottom-[10px] left-0 text-center w-[12px] h-[12px] border-[1px] border-[#2487ce] hover:focus:bg-[#2487ce] rounded-[50%] "></a>
           <a href="#2"
@@ -523,18 +534,22 @@
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
-        <div class=" px-[12px] w-[300px] sm:w-[540px] md:w-[360px] lg:w-[313.98px] xl:w-[380px] mb-[24px]"
+        <div class="group px-[12px] w-[300px] sm:w-[540px] md:w-[360px] lg:w-[313.98px] xl:w-[380px] mb-[24px]"
           data-aos="zoom-in" data-aos-delay="100">
-          <div class="px-[20px] pt-[70px] pb-[80px] text-center bg-white shadow-sm">
+          <div
+            class=" px-[20px] pt-[70px] pb-[80px] text-center bg-white hover:shadow-lg transition ease-in-out delay-150 ">
             <div class="relative w-[100px] mx-auto">
-              <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                <path stroke="none" stroke-width="0" fill="#f5f5f5"
+              <svg class="fill-current text-[#f5f5f5] group-hover:text-[#47aeff] transition ease-in-out delay-150" width="100" height="100" viewBox="0 0 600 600"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke="none" stroke-width="0"
                   d="M300,521.0016835830174C376.1290562159157,517.8887921683347,466.0731472004068,529.7835943286574,510.70327084640275,468.03025145048787C554.3714126377745,407.6079735673963,508.03601936045806,328.9844924480964,491.2728898941984,256.3432110539036C474.5976632858925,184.082847569629,479.9380746630129,96.60480741107993,416.23090153303,58.64404602377083C348.86323505073057,18.502131276798302,261.93793281208167,40.57373210992963,193.5410806939664,78.93577620505333C130.42746243093433,114.334589627462,98.30271207620316,179.96522072025542,76.75703585869454,249.04625023123273C51.97151888228291,328.5150500222984,13.704378332031375,421.85034740162234,66.52175969318436,486.19268352777647C119.04800174914682,550.1803526380478,217.28368757567262,524.383925680826,300,521.0016835830174">
                 </path>
               </svg>
+
               <div class=" absolute top-0 w-[100px] h-[100px] flex items-center ">
-                <img src="assets/dribble.svg" class="w-[36px] h-[36px] mx-auto my-auto" alt="">
+                <svg class="stroke-current text-[#47aeff] group-hover:stroke-[#f5f5f5] w-[36px] h-[36px] mx-auto my-auto transition ease-in-out delay-150 " xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48"><g fill="none"  stroke-linecap="round" stroke-linejoin="round" stroke-width="4"><path d="M44 24a19.938 19.938 0 0 1-5.889 14.173A19.937 19.937 0 0 1 24 44C12.954 44 4 35.046 4 24a19.932 19.932 0 0 1 5.5-13.775A19.943 19.943 0 0 1 24 4a19.937 19.937 0 0 1 14.111 5.827A19.938 19.938 0 0 1 44 24Z"/><path d="M44 24c-2.918 0-10.968-1.1-18.173 2.063C18 29.5 12.333 34.831 9.863 38.147"/><path d="M16.5 5.454C19.63 8.343 26.46 15.698 29 23c2.54 7.302 3.48 16.28 4.06 18.835"/><path d="M4.154 21.5c3.778.228 13.779.433 20.179-2.3c6.4-2.733 11.907-7.76 13.796-9.355M5.5 31.613a20.076 20.076 0 0 0 9 9.991"/><path d="M4 24a19.932 19.932 0 0 1 5.5-13.775M24 4a19.943 19.943 0 0 0-14.5 6.225M32 5.664a20.037 20.037 0 0 1 6.111 4.163A19.938 19.938 0 0 1 44 24c0 2.462-.445 4.821-1.26 7M24 44a19.937 19.937 0 0 0 14.111-5.827"/></g></svg>   
               </div>
+
             </div>
             <h4 class="font-[600] mt-[10px] mb-[15px] text-[22px] font-raleway text-[#124265]"><a href="">Lorem
                 Ipsum</a></h4>
@@ -543,18 +558,24 @@
           </div>
         </div>
 
-        <div class=" px-[12px] w-[300px] sm:w-[540px] md:w-[360px] lg:w-[313.98px] xl:w-[380px] mb-[24px]"
+        <div class="group px-[12px] w-[300px] sm:w-[540px] md:w-[360px] lg:w-[313.98px] xl:w-[380px] mb-[24px]"
           data-aos="zoom-in" data-aos-delay="200">
-          <div class="px-[20px] pt-[70px] pb-[80px] text-center bg-white shadow-sm">
+          <div
+            class="px-[20px] pt-[70px] pb-[80px] text-center bg-white hover:shadow-lg transition ease-in-out delay-150">
             <div class="relative w-[100px] mx-auto">
-              <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                <path stroke="none" stroke-width="0" fill="#f5f5f5"
-                  d="M300,521.0016835830174C376.1290562159157,517.8887921683347,466.0731472004068,529.7835943286574,510.70327084640275,468.03025145048787C554.3714126377745,407.6079735673963,508.03601936045806,328.9844924480964,491.2728898941984,256.3432110539036C474.5976632858925,184.082847569629,479.9380746630129,96.60480741107993,416.23090153303,58.64404602377083C348.86323505073057,18.502131276798302,261.93793281208167,40.57373210992963,193.5410806939664,78.93577620505333C130.42746243093433,114.334589627462,98.30271207620316,179.96522072025542,76.75703585869454,249.04625023123273C51.97151888228291,328.5150500222984,13.704378332031375,421.85034740162234,66.52175969318436,486.19268352777647C119.04800174914682,550.1803526380478,217.28368757567262,524.383925680826,300,521.0016835830174">
+              <svg class="fill-current text-[#f5f5f5] group-hover:text-[#ffa76e] transition ease-in-out delay-150" width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                <path stroke="none" stroke-width="0" 
+                  d="M300,582.0697525312426C382.5290701553225,586.8405444964366,449.9789794690241,525.3245884688669,502.5850820975895,461.55621195738473C556.606425686781,396.0723002908107,615.8543463187945,314.28637112970534,586.6730223649479,234.56875336149918C558.9533121215079,158.8439757836574,454.9685369536778,164.00468322053177,381.49747125262974,130.76875717737553C312.15926192815925,99.40240125094834,248.97055460311594,18.661163978235184,179.8680185752513,50.54337015887873C110.5421016452524,82.52863877960104,119.82277516462835,180.83849132639028,109.12597500060166,256.43424936330496C100.08760227029461,320.3096726198365,92.17705696193138,384.0621239912766,124.79988738764834,439.7174275375508C164.83382741302287,508.01625554203684,220.96474134820875,577.5009287672846,300,582.0697525312426">
                 </path>
               </svg>
+
               <div class=" absolute top-0 w-[100px] h-[100px] flex items-center ">
-                <img src="assets/file.svg" class="w-[36px] h-[36px] mx-auto my-auto" alt="">
+                <svg  class="fill-current text-[#ffa76e] group-hover:fill-[#f5f5f5] w-[36px] h-[36px] mx-auto my-auto transition ease-in-out delay-150" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <path  d="M19.903 8.586a.997.997 0 0 0-.196-.293l-6-6a.997.997 0 0 0-.293-.196c-.03-.014-.062-.022-.094-.033a.991.991 0 0 0-.259-.051C13.04 2.011 13.021 2 13 2H6c-1.103 0-2 .897-2 2v16c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V9c0-.021-.011-.04-.013-.062a.952.952 0 0 0-.051-.259c-.01-.032-.019-.063-.033-.093zM16.586 8H14V5.414L16.586 8zM6 20V4h6v5a1 1 0 0 0 1 1h5l.002 10H6z"/>
+                  <path d="M8 12h8v2H8zm0 4h8v2H8zm0-8h2v2H8z"/></svg>
+               
               </div>
+
             </div>
             <h4 class="font-[600] mt-[10px] mb-[15px] text-[22px] font-raleway text-[#124265]"><a href="">Sed
                 Perspiciatis</a></h4>
@@ -563,18 +584,24 @@
           </div>
         </div>
 
-        <div class="px-[12px] w-[300px] sm:w-[540px] md:w-[360px] lg:w-[313.98px] xl:w-[380px] mb-[24px]"
+        <div class="group px-[12px] w-[300px] sm:w-[540px] md:w-[360px] lg:w-[313.98px] xl:w-[380px] mb-[24px]"
           data-aos="zoom-in" data-aos-delay="300">
-          <div class="px-[20px] pt-[70px] pb-[80px] text-center bg-white shadow-sm">
+          <div
+            class="px-[20px] pt-[70px] pb-[80px] text-center bg-white hover:shadow-lg transition ease-in-out delay-150">
             <div class="relative w-[100px] mx-auto">
-              <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                <path stroke="none" stroke-width="0" fill="#f5f5f5"
-                  d="M300,521.0016835830174C376.1290562159157,517.8887921683347,466.0731472004068,529.7835943286574,510.70327084640275,468.03025145048787C554.3714126377745,407.6079735673963,508.03601936045806,328.9844924480964,491.2728898941984,256.3432110539036C474.5976632858925,184.082847569629,479.9380746630129,96.60480741107993,416.23090153303,58.64404602377083C348.86323505073057,18.502131276798302,261.93793281208167,40.57373210992963,193.5410806939664,78.93577620505333C130.42746243093433,114.334589627462,98.30271207620316,179.96522072025542,76.75703585869454,249.04625023123273C51.97151888228291,328.5150500222984,13.704378332031375,421.85034740162234,66.52175969318436,486.19268352777647C119.04800174914682,550.1803526380478,217.28368757567262,524.383925680826,300,521.0016835830174">
+              <svg class="fill-current text-[#f5f5f5] group-hover:fill-[#e80368] transition ease-in-out delay-150" width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                <path stroke="none" stroke-width="0" 
+                  d="M300,541.5067337569781C382.14930387511276,545.0595476570109,479.8736841581634,548.3450877840088,526.4010558755058,480.5488172755941C571.5218469581645,414.80211281144784,517.5187510058486,332.0715597781072,496.52539010469104,255.14436215662573C477.37192572678356,184.95920475031193,473.57363656557914,105.61284051026155,413.0603344069578,65.22779650032875C343.27470386102294,18.654635553484475,251.2091493199835,5.337323636656869,175.0934190732945,40.62881213300186C97.87086631185822,76.43348514350839,51.98124368387456,156.15599469081315,36.44837278890362,239.84606092416172C21.716077023791087,319.22268207091537,43.775223500013084,401.1760424656574,96.891909868211,461.97329694683043C147.22146801428983,519.5804099606455,223.5754009179313,538.201503339737,300,541.5067337569781">
                 </path>
               </svg>
+
               <div class=" absolute top-0 w-[100px] h-[100px] flex items-center ">
-                <img src="assets/meter.svg" class="w-[36px] h-[36px] mx-auto my-auto" alt="">
+                <svg class="fill-current text-[#e80368] group-hover:fill-[#f5f5f5] w-[36px] h-[36px] mx-auto my-auto transition ease-in-out delay-150" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <path fill="" d="M12 4C6.486 4 2 8.486 2 14a9.89 9.89 0 0 0 1.051 4.445c.17.34.516.555.895.555h16.107c.379 0 .726-.215.896-.555A9.89 9.89 0 0 0 22 14c0-5.514-4.486-10-10-10zm7.41 13H4.59A7.875 7.875 0 0 1 4 14c0-4.411 3.589-8 8-8s8 3.589 8 8a7.875 7.875 0 0 1-.59 3z"/>
+                  <path  d="M10.939 12.939a1.53 1.53 0 0 0 0 2.561a1.53 1.53 0 0 0 2.121-.44l3.962-6.038a.034.034 0 0 0 0-.035a.033.033 0 0 0-.045-.01l-6.038 3.962z"/></svg>
+               
               </div>
+
             </div>
             <h4 class="font-[600] mt-[10px] mb-[15px] text-[22px] font-raleway text-[#124265]"><a href="">Magni
                 Dolores</a></h4>
@@ -583,18 +610,25 @@
           </div>
         </div>
 
-        <div class=" px-[12px] w-[300px] sm:w-[540px] md:w-[360px] lg:w-[313.98px] xl:w-[380px] mb-[24px]"
+        <div class="group px-[12px] w-[300px] sm:w-[540px] md:w-[360px] lg:w-[313.98px] xl:w-[380px] mb-[24px]"
           data-aos="zoom-in" data-aos-delay="100">
-          <div class="px-[20px] pt-[70px] pb-[80px] text-center bg-white shadow-sm">
+          <div
+            class="px-[20px] pt-[70px] pb-[80px] text-center bg-white hover:shadow-lg transition ease-in-out delay-150">
             <div class="relative w-[100px] mx-auto">
-              <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                <path stroke="none" stroke-width="0" fill="#f5f5f5"
-                  d="M300,521.0016835830174C376.1290562159157,517.8887921683347,466.0731472004068,529.7835943286574,510.70327084640275,468.03025145048787C554.3714126377745,407.6079735673963,508.03601936045806,328.9844924480964,491.2728898941984,256.3432110539036C474.5976632858925,184.082847569629,479.9380746630129,96.60480741107993,416.23090153303,58.64404602377083C348.86323505073057,18.502131276798302,261.93793281208167,40.57373210992963,193.5410806939664,78.93577620505333C130.42746243093433,114.334589627462,98.30271207620316,179.96522072025542,76.75703585869454,249.04625023123273C51.97151888228291,328.5150500222984,13.704378332031375,421.85034740162234,66.52175969318436,486.19268352777647C119.04800174914682,550.1803526380478,217.28368757567262,524.383925680826,300,521.0016835830174">
+              <svg class="fill-current text-[#f5f5f5] group-hover:fill-[#ffbb2c] transition ease-in-out delay-150" width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                <path stroke="none" stroke-width="0" 
+                  d="M300,503.46388370962813C374.79870501325706,506.71871716319447,464.8034551963731,527.1746412648533,510.4981551193396,467.86667711651364C555.9287308511215,408.9015244558933,512.6030010748507,327.5744911775523,490.211057578863,256.5855673507754C471.097692560561,195.9906835881958,447.69079081568157,138.11976852964426,395.19560036434837,102.3242989838813C329.3053358748298,57.3949838291264,248.02791733380457,8.279543830951368,175.87071277845988,42.242879143198664C103.41431057327972,76.34704239035025,93.79494320519305,170.9812938413882,81.28167332365135,250.07896920659033C70.17666984294237,320.27484674793965,64.84698225790005,396.69656628748305,111.28512138212992,450.4950937839243C156.20124167950087,502.5303643271138,231.32542653798444,500.4755392045468,300,503.46388370962813">
                 </path>
               </svg>
+
               <div class=" absolute top-0 w-[100px] h-[100px] flex items-center ">
-                <img src="assets/layer.svg" class="w-[36px] h-[36px] mx-auto my-auto" alt="">
+                <svg class="fill-current text-[#ffbb2c] group-hover:fill-[#f5f5f5] w-[36px] h-[36px] mx-auto my-auto transition ease-in-out delay-150" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <path  d="M22 7.999a1 1 0 0 0-.516-.874l-9.022-5a1.003 1.003 0 0 0-.968 0l-8.978 4.96a1 1 0 0 0-.003 1.748l9.022 5.04a.995.995 0 0 0 .973.001l8.978-5A1 1 0 0 0 22 7.999zm-9.977 3.855L5.06 7.965l6.917-3.822l6.964 3.859l-6.918 3.852z"/>
+                  <path  d="M20.515 11.126L12 15.856l-8.515-4.73l-.971 1.748l9 5a1 1 0 0 0 .971 0l9-5l-.97-1.748z"/>
+                  <path  d="M20.515 15.126L12 19.856l-8.515-4.73l-.971 1.748l9 5a1 1 0 0 0 .971 0l9-5l-.97-1.748z"/></svg>
+                
               </div>
+
             </div>
             <h4 class="font-[600] mt-[10px] mb-[15px] text-[22px] font-raleway text-[#124265]"><a href="">Nemo Enim</a>
             </h4>
@@ -603,18 +637,24 @@
           </div>
         </div>
 
-        <div class=" px-[12px] w-[300px] sm:w-[540px] md:w-[360px] lg:w-[313.98px] xl:w-[380px] mb-[24px]"
+        <div class="group px-[12px] w-[300px] sm:w-[540px] md:w-[360px] lg:w-[313.98px] xl:w-[380px] mb-[24px]"
           data-aos="zoom-in" data-aos-delay="200">
-          <div class="px-[20px] pt-[70px] pb-[80px] text-center bg-white shadow-sm">
+          <div
+            class="px-[20px] pt-[70px] pb-[80px] text-center bg-white hover:shadow-lg transition ease-in-out delay-150">
             <div class="relative w-[100px] mx-auto">
-              <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                <path stroke="none" stroke-width="0" fill="#f5f5f5"
-                  d="M300,521.0016835830174C376.1290562159157,517.8887921683347,466.0731472004068,529.7835943286574,510.70327084640275,468.03025145048787C554.3714126377745,407.6079735673963,508.03601936045806,328.9844924480964,491.2728898941984,256.3432110539036C474.5976632858925,184.082847569629,479.9380746630129,96.60480741107993,416.23090153303,58.64404602377083C348.86323505073057,18.502131276798302,261.93793281208167,40.57373210992963,193.5410806939664,78.93577620505333C130.42746243093433,114.334589627462,98.30271207620316,179.96522072025542,76.75703585869454,249.04625023123273C51.97151888228291,328.5150500222984,13.704378332031375,421.85034740162234,66.52175969318436,486.19268352777647C119.04800174914682,550.1803526380478,217.28368757567262,524.383925680826,300,521.0016835830174">
+              <svg class="fill-current text-[#f5f5f5] group-hover:fill-[#ff5828] transition ease-in-out delay-150" width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                <path stroke="none" stroke-width="0" 
+                  d="M300,532.3542879108572C369.38199826031484,532.3153073249985,429.10787420159085,491.63046689027357,474.5244479745417,439.17860296908856C522.8885846962883,383.3225815378663,569.1668002868075,314.3205725914397,550.7432151929288,242.7694973846089C532.6665558377875,172.5657663291529,456.2379748765914,142.6223662098291,390.3689995646985,112.34683881706744C326.66090330228417,83.06452184765237,258.84405631176094,53.51806209861945,193.32584062364296,78.48882559362697C121.61183558270385,105.82097193414197,62.805066853699245,167.19869350419734,48.57481801355237,242.6138429142374C34.843463184063346,315.3850353017275,76.69343916112496,383.4422959591041,125.22947124332185,439.3748458443577C170.7312796277747,491.8107796887764,230.57421082200815,532.3932930995766,300,532.3542879108572">
                 </path>
               </svg>
+
               <div class=" absolute top-0 w-[100px] h-[100px] flex items-center ">
-                <img src="assets/slideshow.svg" class="w-[36px] h-[36px] mx-auto my-auto" alt="">
+                <svg class="fill-current text-[#ff5828] group-hover:fill-[#f5f5f5] w-[36px] h-[36px] mx-auto my-auto transition ease-in-out delay-150" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <path  d="M20 3H4c-1.103 0-2 .897-2 2v10c0 1.103.897 2 2 2h7v3H8v2h8v-2h-3v-3h7c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2zM4 15V5h16l.001 10H4z"/>
+                  <path  d="m10 13l5-3l-5-3z"/></svg>
+                
               </div>
+
             </div>
             <h4 class="font-[600] mt-[10px] mb-[15px] text-[22px] font-raleway text-[#124265] "><a href="">Dele
                 Cardo</a></h4>
@@ -623,18 +663,23 @@
           </div>
         </div>
 
-        <div class=" px-[12px] w-[300px] sm:w-[540px] md:w-[360px] lg:w-[313.98px] xl:w-[380px] mb-[24px]"
+        <div class="group px-[12px] w-[300px] sm:w-[540px] md:w-[360px] lg:w-[313.98px] xl:w-[380px] mb-[24px]"
           data-aos="zoom-in" data-aos-delay="300">
-          <div class="px-[20px] pt-[70px] pb-[80px] text-center bg-white shadow-sm">
+          <div
+            class="px-[20px] pt-[70px] pb-[80px] text-center bg-white hover:shadow-xl transition ease-in-out delay-150">
             <div class="relative w-[100px] mx-auto">
-              <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                <path stroke="none" stroke-width="0" fill="#f5f5f5"
-                  d="M300,521.0016835830174C376.1290562159157,517.8887921683347,466.0731472004068,529.7835943286574,510.70327084640275,468.03025145048787C554.3714126377745,407.6079735673963,508.03601936045806,328.9844924480964,491.2728898941984,256.3432110539036C474.5976632858925,184.082847569629,479.9380746630129,96.60480741107993,416.23090153303,58.64404602377083C348.86323505073057,18.502131276798302,261.93793281208167,40.57373210992963,193.5410806939664,78.93577620505333C130.42746243093433,114.334589627462,98.30271207620316,179.96522072025542,76.75703585869454,249.04625023123273C51.97151888228291,328.5150500222984,13.704378332031375,421.85034740162234,66.52175969318436,486.19268352777647C119.04800174914682,550.1803526380478,217.28368757567262,524.383925680826,300,521.0016835830174">
+              <svg class="fill-current text-[#f5f5f5] group-hover:fill-[#11dbcf] transition ease-in-out delay-150" width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                <path stroke="none" stroke-width="0" 
+                  d="M300,566.797414625762C385.7384707136149,576.1784315230908,478.7894351017131,552.8928747891023,531.9192734346935,484.94944893311C584.6109503024035,417.5663521118492,582.489472248146,322.67544863468447,553.9536738515405,242.03673114598146C529.1557734026468,171.96086150256528,465.24506316201064,127.66468636344209,395.9583748389544,100.7403814666027C334.2173773831606,76.7482773500951,269.4350130405921,84.62216499799875,207.1952322260088,107.2889140133804C132.92018162631612,134.33871894543012,41.79353780512637,160.00259165414826,22.644507872594943,236.69541883565114C3.319112789854554,314.0945973066697,72.72355303640163,379.243833228382,124.04198916343866,440.3218312028393C172.9286146004772,498.5055451809895,224.45579914871206,558.5317968840102,300,566.797414625762">
                 </path>
               </svg>
+              
               <div class=" absolute top-0 w-[100px] h-[100px] flex items-center ">
-                <img src="assets/arch.svg" class="w-[36px] h-[36px] mx-auto my-auto" alt="">
+                <svg class="fill-current text-[#11dbcf] group-hover:fill-[#f5f5f5] w-[36px] h-[36px] mx-auto my-auto transition ease-in-out delay-150" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <path  d="M8 22h1v-6.995c.006-.502.177-3.005 3-3.005s2.994 2.503 3 3v7h7v-2h-1V4h1V2H2v2h1v16H2v2h6zM19 4v2H5V4h14zM5 8h14v12h-2v-5c0-1.729-1.045-5-5-5s-5 3.271-5 5v5H5V8z"/></svg>
+                
               </div>
+
             </div>
             <h4 class="font-[600] mt-[10px] mb-[15px] text-[22px] font-raleway text-[#124265]"><a href="">Divera Don</a>
             </h4>
@@ -689,8 +734,8 @@
               <li class="text-[14px] font-openSans text-[#124265] pb-[16px]">Aida dere</li>
               <li class="text-[14px] font-openSans text-[#124265] pb-[16px]">Nec feugiat nisl</li>
               <li class="text-[14px] font-openSans text-[#124265] pb-[16px]">Nulla at volutpat dola</li>
-              <li class="text-[14px] font-openSans text-[#ccc] pb-[16px]">Pharetra massa</li>
-              <li class="text-[14px] font-openSans text-[#ccc] pb-[16px]">Massa ultricies mi</li>
+              <li class="text-[14px] font-openSans text-[#ccc] pb-[16px]"><s>Pharetra massa</s></li>
+              <li class="text-[14px] font-openSans text-[#ccc] pb-[16px]"><s>Massa ultricies mi</s></li>
             </ul>
             <div class="w-full p-[15px]">
               <button href="#"
@@ -712,7 +757,7 @@
               <li class="text-[14px] font-openSans text-[#fff] pb-[16px]">Nec feugiat nisl</li>
               <li class="text-[14px] font-openSans text-[#fff] pb-[16px]">Nulla at volutpat dola</li>
               <li class="text-[14px] font-openSans text-[#fff] pb-[16px]">Pharetra massa</li>
-              <li class="text-[14px] font-openSans text-[#fff] pb-[16px]">Massa ultricies mi</li>
+              <li class="text-[14px] font-openSans text-[#fff] pb-[16px]"><s>Massa ultricies mi</s></li>
             </ul>
             <div class="w-full p-[15px]">
               <button href="#"
@@ -763,11 +808,15 @@
       </div>
 
       <div id="accordion" class="mb-[16px] xl:px-[100px]">
-        <details class="duration-300 p-[20px]">
+        <details class="duration-500 p-[20px]">
           <summary
-            class="bg-inherit text-[#343a40] focus:text-[#2487ce]  cursor-pointer font-poppins leading-[24px] font-[500]"><iconify-icon icon="material-symbols:help-outline" style="color: #469fdf;"></iconify-icon>
+            class="accordion-link bg-inherit text-[#343a40] focus:text-[#2487ce]  cursor-pointer font-poppins leading-[24px] font-[500] flex items-center">
+            <iconify-icon icon="material-symbols:help-outline" class="pr-[4px]"
+              style="color: #87c1ea; font-size: 1.625em;"></iconify-icon>
             Non consectetur a
-            erat nam at lectus urna duis?</summary>
+            erat nam at lectus urna duis? <ion-icon name="chevron-down-outline" onclick="onToggleMenu(this)"
+              class="cursor-pointer w-[26px] h-[26px]"></ion-icon>
+          </summary>
           <div class="pt-[10px] text-[16px] font-openSans text-[#444444]">
             <p>
               Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur
@@ -775,10 +824,15 @@
             </p>
           </div>
         </details>
-        <details class="duration-300 mt-[15px] p-[20px]">
-          <summary class="bg-inherit text-[#343a40] focus:text-[#2487ce]  cursor-pointer font-poppins leading-[24px] font-[500]"><iconify-icon icon="material-symbols:help-outline" style="color: #469fdf;"></iconify-icon>
+        <details class="duration-500 mt-[15px] p-[20px]">
+          <summary
+            class="bg-inherit text-[#343a40] focus:text-[#2487ce]  cursor-pointer font-poppins leading-[24px] font-[500]  flex items-center">
+            <iconify-icon icon="material-symbols:help-outline" class="pr-[4px]"
+              style="color: #87c1ea; font-size: 1.625em;"></iconify-icon>
             Feugiat
-            scelerisque varius morbi enim nunc? </summary>
+            scelerisque varius morbi enim nunc? <ion-icon name="chevron-down-outline" onclick="onToggleMenu(this)"
+              class="cursor-pointer w-[26px] h-[26px]"></ion-icon>
+          </summary>
           <div class="pt-[10px] text-[16px] font-openSans text-[#444444]">
             <p>
               Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id
@@ -789,9 +843,13 @@
         </details>
         <details class="duration-300 mt-[15px] p-[20px]">
           <summary
-            class="bg-inherit text-[#343a40] focus:text-[#2487ce]  cursor-pointer font-poppins leading-[24px] font-[500]"><iconify-icon icon="material-symbols:help-outline" style="color: #469fdf;"></iconify-icon>
+            class="bg-inherit text-[#343a40] focus:text-[#2487ce]  cursor-pointer font-poppins leading-[24px] font-[500]  flex items-center">
+            <iconify-icon icon="material-symbols:help-outline" class="pr-[4px]"
+              style="color: #87c1ea; font-size: 1.625em;"></iconify-icon>
             Dolor sit amet
-            consectetur adipiscing elit? </summary>
+            consectetur adipiscing elit? <ion-icon name="chevron-down-outline" onclick="onToggleMenu(this)"
+              class="cursor-pointer w-[26px] h-[26px]"></ion-icon>
+          </summary>
           <div class="pt-[10px] text-[16px] font-openSans text-[#444444]">
             <p>
               Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum
@@ -803,9 +861,13 @@
         </details>
         <details class="duration-300 mt-[15px] p-[20px]">
           <summary
-            class="bg-inherit text-[#343a40] focus:text-[#2487ce]  cursor-pointer font-poppins leading-[24px] font-[500]"><iconify-icon icon="material-symbols:help-outline" style="color: #469fdf;"></iconify-icon>
+            class="bg-inherit text-[#343a40] focus:text-[#2487ce]  cursor-pointer font-poppins leading-[24px] font-[500]  flex items-center">
+            <iconify-icon icon="material-symbols:help-outline" class="pr-[4px]"
+              style="color: #87c1ea; font-size: 1.625em;"></iconify-icon>
             Tempus quam
-            pellentesque nec nam aliquam sem et tortor consequat?</summary>
+            pellentesque nec nam aliquam sem et tortor consequat? <ion-icon name="chevron-down-outline"
+              onclick="onToggleMenu(this)" class="cursor-pointer w-[26px] h-[26px]"></ion-icon>
+          </summary>
           <div class="pt-[10px] text-[16px] font-openSans text-[#444444]">
             <p>
               Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc
@@ -816,10 +878,14 @@
         </details>
         <details class="duration-300 mt-[15px] p-[20px]">
           <summary
-            class="bg-inherit text-[#343a40] focus:text-[#2487ce]  cursor-pointer font-poppins leading-[24px] font-[500]"><iconify-icon icon="material-symbols:help-outline" style="color: #469fdf;"></iconify-icon>
+            class="bg-inherit text-[#343a40] focus:text-[#2487ce]  cursor-pointer font-poppins leading-[24px] font-[500]  flex items-center">
+            <iconify-icon icon="material-symbols:help-outline" class="pr-[4px]"
+              style="color: #87c1ea; font-size: 1.625em;"></iconify-icon>
             Tortor vitae
             purus faucibus ornare. Varius vel pharetra vel turpis nunc eget lorem
-            dolor?</summary>
+            dolor? <ion-icon name="chevron-down-outline" onclick="onToggleMenu(this)"
+              class="cursor-pointer w-[26px] h-[26px]"></ion-icon>
+          </summary>
           <div class="pt-[10px] text-[16px] font-openSans text-[#444444]">
             <p>
               Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada
@@ -828,6 +894,13 @@
             </p>
           </div>
         </details>
+
+        <script>
+          function onToggleMenu(e) {
+            e.name = e.name === 'chevron-down-outline' ? 'chevron-up-outline' : 'chevron-down-outline'
+            navlink.classList.toggle('top-[9%]')
+          }
+        </script>
       </div>
   </section><!-- End Frequently Asked Questions Section -->
 
@@ -1030,6 +1103,22 @@
   <a href="#"
     class="fixed bottom-[15px] right-[15px] back-to-top rounded-[4px]  w-[40px] h-[40px] p-[6px] bg-[#2487ce]"><img
       src="assets/arrowup.svg" alt="" class="w-[28px] h-[28px]"></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+ <!--  vendor  JS File 
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+-->
+  
+
+  <!-- Template Main JS File
+  <script src="assets/js/main.js"></script>  -->
 </body>
 
 </html>
